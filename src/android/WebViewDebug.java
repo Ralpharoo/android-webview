@@ -30,13 +30,13 @@ public class WebViewDebug extends CordovaPlugin
      */
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
         super.initialize(cordova, webView);
-        
-        WebView.setWebContentsDebuggingEnabled(true);
-	
+        	
 	// Trial to enhance speed? https://stackoverflow.com/questions/32304237/android-webview-loading-data-performance-very-slow
 	// For API level below 18 (This method was deprecated in API level 18)
 	WebView setWebView = (WebView) WebViewDebug.this.webView.getEngine().getView();
-	setWebView.setWebContentsDebuggingEnabled(true);
+	
+	//setWebView.setWebContentsDebuggingEnabled(true);
+        //WebView.setWebContentsDebuggingEnabled(true);
 
 	WebSettings settings = setWebView.getSettings();
 	
