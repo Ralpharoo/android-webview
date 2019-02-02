@@ -41,7 +41,7 @@ public class WebViewDebug extends CordovaPlugin
 	
 	// Trial to enhance speed? https://stackoverflow.com/questions/32304237/android-webview-loading-data-performance-very-slow
 	// For API level below 18 (This method was deprecated in API level 18)
-	WebView webView = (WebView) UnfoldPlugin.this.webView.getEngine().getView();
+	WebView webView = (WebView) WebViewDebug.this.webView.getEngine().getView();
         WebSettings settings = webView.getSettings();
 	
 	webView.getSettings().setRenderPriority(WebSettings.RenderPriority.HIGH); 
