@@ -33,9 +33,19 @@ public class WebViewDebug extends CordovaPlugin
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
         	if ( 0 != (cordova.getActivity().getApplication().getApplicationInfo().flags &= ApplicationInfo.FLAG_DEBUGGABLE ) ) {
         		Log.v(TAG, "Attempting to enable WebView.setWebContentsDebuggingEnabled");
-        		
         		WebView.setWebContentsDebuggingEnabled(true);
-            }
+            	}
+		
         }
+	
+	// Trial to enhance speed? https://stackoverflow.com/questions/32304237/android-webview-loading-data-performance-very-slow
+	// For API level below 18 (This method was deprecated in API level 18)
+	webview.getSettings().setRenderPriority(RenderPriority.HIGH); 
+	webview.getSettings().setCacheMode(WebSettings.LOAD_NO_CACHE);
+	if (Build.VERSION.SDK_INT >= 19) {
+		webView.setLayerType(View.LAYER_TYPE_HARDWARE, null);
+	}  else {
+		webView.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
+	}
     }
 }
