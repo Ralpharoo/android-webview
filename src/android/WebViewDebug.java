@@ -7,6 +7,7 @@ import org.apache.cordova.CordovaPlugin;
 import android.content.pm.ApplicationInfo;
 import android.os.Build;
 import android.webkit.WebView;
+import android.webkit.WebSettings;
 
 import android.util.Log;
 /**
