@@ -1,0 +1,28 @@
+{
+  "name": "android-webview",
+  "version": "0.1.997",
+  "description": "",
+  "cordova": {
+    "id": "android-webview",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ralpharoo/android-webview.git"
+  },
+  "keywords": [],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "Ralpharro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ralpharoo/android-webview/issues"
+  },
+  "homepage": "https://github.com/Ralpharoo/android-webview#readme"
+}
